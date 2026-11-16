@@ -1,0 +1,33 @@
+{
+  "url": "https://github.com/verl-project/verl/pull/8676",
+  "capturedAt": "2026-11-16T17:24:00Z",
+  "cutoff": "2026-11-12T17:37:38Z",
+  "head": "b8d3946cce40920605c6d9d92528d5f2214d116a",
+  "base": "8c94a12d7811030413cd85e2bba6db863e0913c8",
+  "previousHead": "1f39792397667ac816fc2c391c725804139ae620",
+  "blobIds": {
+    "verl/utils/reward_score/math_dapo.py": "ca7fa20d72604d9efb51c9a169557284d0b4c393",
+    "tests/utils/reward_score/test_math_dapo_assignments_on_cpu.py": "3b7153315e4b829dcd7713ccfde47a6fc91b21ea",
+    "LICENSE": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+  },
+  "reviews": [
+    {
+      "id": "inline-4554055009",
+      "url": "https://github.com/verl-project/verl/pull/8676#discussion_r4554055009",
+      "at": "2026-11-12T17:37:36Z",
+      "kind": "inline",
+      "path": "verl/utils/reward_score/math_dapo.py",
+      "originalCommit": "b8d3946cce40920605c6d9d92528d5f2214d116a",
+      "body": "CodeRabbit observed that a LaTeX and separator between assignments broke the guard. With first values 2 and 1 and the same second value 3, both answers normalize to the second value. It requested a negative regression case."
+    },
+    {
+      "id": "inline-4553954673",
+      "url": "https://github.com/verl-project/verl/pull/8676#discussion_r4553954673",
+      "at": "2026-11-12T17:28:51Z",
+      "kind": "inline",
+      "path": "verl/utils/reward_score/math_dapo.py",
+      "originalCommit": "1f39792397667ac816fc2c391c725804139ae620",
+      "body": "CodeRabbit reported overlooked braced subscripts and Greek variable names on the earlier commit. The comment was updated at 17:33:45 UTC to point to b8d3946."
+    }
+  ]
+}

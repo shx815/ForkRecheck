@@ -1,0 +1,24 @@
+{
+  "hardware": "cpu",
+  "editable": ["verl/utils/reward_score/math_dapo.py"],
+  "uncovered": [
+    "The vendored historical checkout contains only the scorer, its CPU test file, and license.",
+    "The original 16 parametrized case functions run directly with a minimal pytest decorator shim.",
+    "GPU/NPU, the full pytest integration suite, and GitHub Actions remain unverified."
+  ],
+  "targets": [
+    {
+      "id": "assignment-separator", "kind": "regression", "hardware": "cpu", "timeoutMs": 10000,
+      "argv": ["python3", "-B", "{configDir}/regression.py", "regression"],
+      "requires": ["Python 3.9+"], "inputs": ["regression.py"], "paths": ["verl/utils/reward_score/math_dapo.py"],
+      "fail": {"exitCode": 42, "marker": "FORK_RECHECK:assignment-collapse"},
+      "passMarker": "FORK_RECHECK:regression-pass"
+    },
+    {
+      "id": "historical-assignment-cases", "kind": "related", "hardware": "cpu", "timeoutMs": 10000,
+      "argv": ["python3", "-B", "{configDir}/regression.py", "related"],
+      "requires": ["Python 3.9+"], "inputs": ["regression.py"], "paths": ["verl/utils/reward_score/math_dapo.py"],
+      "passMarker": "FORK_RECHECK:related-pass"
+    }
+  ]
+}

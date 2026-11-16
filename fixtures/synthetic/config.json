@@ -1,0 +1,19 @@
+{
+  "hardware": "cpu",
+  "editable": ["score.js"],
+  "uncovered": ["Synthetic fixture. Remote CI and GPU checks were outside its scope."],
+  "targets": [
+    {
+      "id": "first-value", "kind": "regression", "hardware": "cpu", "timeoutMs": 5000,
+      "argv": ["{node}", "{configDir}/expect.mjs", "regression"],
+      "requires": ["Node 24+"], "inputs": ["expect.mjs"], "paths": ["score.js"],
+      "fail": {"exitCode": 42, "marker": "FORK_RECHECK:first-value-ignored"}, "passMarker": "FORK_RECHECK:regression-pass"
+    },
+    {
+      "id": "controls", "kind": "related", "hardware": "cpu", "timeoutMs": 5000,
+      "argv": ["{node}", "{configDir}/expect.mjs", "related"],
+      "requires": ["Node 24+"], "inputs": ["expect.mjs"], "paths": ["score.js"],
+      "passMarker": "FORK_RECHECK:related-pass"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+node_modules/
+.fork-recheck/
+__pycache__/
+*.tgz
+dist/
